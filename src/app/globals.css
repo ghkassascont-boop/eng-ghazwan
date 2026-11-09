@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm Architectural Luxury — refined ivory, sand, greige and espresso */
+  --bg: #F3F0E9;
+  --surface: #FAF8F3;
+  --surface-2: #DDD3C5;
+  --ink: #382C25;
+  --muted: #75685D;
+  --coffee: #806653;
+  --coffee-dark: #382C25;
+  --accent: #B8AA99;
+  --line: #CFC4B7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+::selection { background: var(--accent); color: var(--ink); }
+.container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .22em; font-size: 11px; font-weight: 700; }
+.display { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -.045em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--coffee); background: var(--coffee); color: var(--surface); padding: 13px 20px; border-radius: 3px; transition: .2s; }
+.btn:hover { background: var(--coffee-dark); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--coffee); }
+.btn-outline:hover { color: white; }
+.card { background: var(--surface); border: 1px solid var(--line); }
+.field { width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 12px 14px; color: var(--ink); outline: none; }
+.field:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #B8AA9926; }
