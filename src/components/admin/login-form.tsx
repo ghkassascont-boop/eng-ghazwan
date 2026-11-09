@@ -1,5 +1,0 @@
- "use client";
-import {useState} from "react";import {useRouter} from "next/navigation";import {createClient} from "@/lib/supabase/client";
-export default function LoginForm(){const [email,setEmail]=useState("");const [password,setPassword]=useState("");const [error,setError]=useState("");const router=useRouter();
- async function submit(e:React.FormEvent){e.preventDefault();setError("");try{const sb=createClient();const {error}=await sb.auth.signInWithPassword({email,password});if(error)throw error;router.push("/admin");router.refresh();}catch(e){setError(e instanceof Error?e.message:"Login failed");}}
- return <form onSubmit={submit} className="mt-7 grid gap-4"><label className="text-xs">Email<input className="field mt-2" type="email" required value={email} onChange={e=>setEmail(e.target.value)}/></label><label className="text-xs">Password<input className="field mt-2" type="password" required value={password} onChange={e=>setPassword(e.target.value)}/></label><button className="btn w-full">Sign in</button><p className="text-sm text-red-700">{error}</p></form>}
