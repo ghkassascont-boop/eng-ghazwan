@@ -1,2 +1,0 @@
-import {redirect} from "next/navigation";import {createClient} from "@/lib/supabase/server";import ProjectEditor from "@/components/admin/project-editor";
-export default async function NewProject(){const sb=await createClient();const {data:{user}}=await sb.auth.getUser();if(!user)redirect("/admin/login");const {data:admin}=await sb.from("admin_users").select("role").eq("user_id",user.id).maybeSingle();if(!admin)redirect("/admin/login");return <main className="container py-12"><ProjectEditor/></main>}
