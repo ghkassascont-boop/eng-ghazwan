@@ -1,0 +1,3 @@
+Project scaffold generated.
+Includes: Next.js App Router, bilingual EN/AR UI, beige/coffee palette, Supabase schema/RLS, admin login/dashboard/project CRUD/messages, Cloudflare OpenNext config.
+Not yet configured against a live Supabase project and not deployed. See README_AR.md.
