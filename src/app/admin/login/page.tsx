@@ -1,0 +1,2 @@
+import LoginForm from "@/components/admin/login-form";
+export default function LoginPage(){return <main className="grid min-h-screen place-items-center p-5"><div className="card w-full max-w-md p-8"><p className="eyebrow">PRIVATE AREA</p><h1 className="display mt-3 text-4xl">Admin sign in</h1><p className="mt-3 text-sm text-[var(--muted)]">Sign in with the administrator account created in Supabase.</p><LoginForm/></div></main>}
